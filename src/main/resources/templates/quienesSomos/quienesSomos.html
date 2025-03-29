@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Verdureria Henry</title>
+        
+    </head>
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+        
+            <section class="container my-5">
+                <div class="col-md-6 mx-auto">
+                    <h1>
+                        <i class="fas fa-seedling"></i> <!-- Icono -->
+                        [[#{plantilla.quienesSomos}]] <!-- Mensaje de Thymeleaf -->
+                    </h1>
+                    <h2>[[#{plantilla.quienesSomos}]]</h2>  
+                    <p>
+                        [[#{quienesSomos}]]  
+                    </p>
+                    <h2>[[#{plantilla.mision}]]</h2>  
+                    <p>
+                        [[#{quienesSomos.Mision}]]   
+                    </p>
+                    <h2>[[#{plantilla.vision}]]</h2>  
+                    <p>
+                        [[#{quienesSomos.Vision}]] 
+                    </p>
+                </div>          
+            </section>
+        <footer th:replace="~{layout/plantilla :: footer}"/>
+    </body>
+</html>
