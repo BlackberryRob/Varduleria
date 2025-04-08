@@ -7,14 +7,14 @@ import org.springframework.data.repository.query.Param;
 
 public interface ProductoDao extends JpaRepository<Producto, Long> {
 
-    // Encuentra productos por descripción, ignorando mayúsculas y minúsculas
+    // Consulta ampliada: Encuentra productos por descripción (nombre), ignorando mayúsculas y minúsculas
     List<Producto> findByDescripcionContainingIgnoreCaseOrderByPrecioAsc(String descripcion);
 
-    //Ejemplo 2: de método utilizando Consultas con JPQL
+    //Consulta con JPQL vista en clase
     @Query(value = "SELECT a FROM Producto a where a.precio BETWEEN :precioInf AND :precioSup ORDER BY a.descripcion ASC")
     public List<Producto> metodoJPQL(@Param("precioInf") double precioInf, @Param("precioSup") double precioSup);
 
-    //Ejemplo 3: de método utilizando Consultas con SQL nativo
+    //Consulta con SQL nativo filtrando por categoria
     @Query(nativeQuery = true,
             value = "SELECT p.* FROM producto p "
             + "JOIN categoria c ON p.id_categoria = c.id_categoria "

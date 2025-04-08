@@ -53,8 +53,7 @@ public class PruebasController {
     }
 
 
-    /*Practica #4 Debe agregar al proyecto tienda una versión de una consulta ampliada de su libre escogencia, 
-    puede ser de tabla producto, categoria o venta.*/
+    //Ejemplo 1
     @PostMapping("/query1")
     public String consultaQueryDescripcion(@RequestParam(value = "descripcion") String descripcion, Model model) {
         var productos = productoService.findByDescripcionContainingIgnoreCaseOrderByPrecioAsc(descripcion);

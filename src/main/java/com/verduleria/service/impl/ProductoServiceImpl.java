@@ -42,15 +42,12 @@ public class ProductoServiceImpl implements ProductoService {
         productoDao.delete(producto);
     }
 
-    /*Practica #4 Debe agregar al proyecto tienda una versión de una consulta ampliada de su libre escogencia, 
-    puede ser de tabla producto, categoria o venta.*/
     @Override
     @Transactional(readOnly = true)
     public List<Producto> findByDescripcionContainingIgnoreCaseOrderByPrecioAsc(String descripcion) {
         return productoDao.findByDescripcionContainingIgnoreCaseOrderByPrecioAsc(descripcion);
     }
 
-    //Ejemplo 2
     @Override
     @Transactional(readOnly = true)
     public List<Producto> metodoJPQL(double precioInf, double precioSup) {

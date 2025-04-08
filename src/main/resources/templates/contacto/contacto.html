@@ -6,63 +6,33 @@
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"/>
-        <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">   
-                        <button 
-                            type="button" 
-                            class="btn btn-primary btn-block" 
-                            data-bs-toggle="modal" 
-                            data-bs-target="#contactFormModal">
-                            <i class="fas fa-plus"></i> [[#{plantilla.contacto}]]
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Formulario Modal -->
-        <section th:fragment="contactFormModal">
-            <div id="contactFormModal" 
-                 class="modal fade" 
-                 tabindex="-1" 
-                 aria-labelledby="contactFormLabel" 
-                 aria-hidden="true">
-                <div class="modal-dialog modal-md">
-                    <div class="modal-content">
-                        <div class="modal-header bg-info text-white">
-                            <h5 class="modal-title" id="contactFormLabel">[[#{plantilla.contacto}]]</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div> 
-                        <form method="POST" class="was-validated">
-                            <div class="modal-body">
-                                <div class="mb-3">
-                                    <label for="nombre">[[#{usuario.nombre}]]</label>
-                                    <input type="text" class="form-control" name="nombre" required="true"/>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="correo">[[#{usuario.correo}]]</label>
-                                    <input type="email" class="form-control" name="correo" required="true"/>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="telefono">[[#{usuario.telefono}]]</label>
-                                    <input type="tel" class="form-control" name="telefono"/>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="comentario">[[#{usuario.comentario}]]</label>
-                                    <textarea class="form-control" name="comentario" rows="3" required="true"></textarea>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-
-                                <button class="btn btn-primary" type="button" data-bs-dismiss="modal">[[#{accion.enviar}]]</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <section class="container my-5">
+                <div class="col-md-6 mx-auto">
+                    <h1>
+                        <i class="fas fa-seedling"></i> <!-- Icono -->
+                        [[#{contacto.contacto}]] 
+                    </h1>
+                    <h2>[[#{contacto.direccion}]]</h2>  
+                    <p>
+                        [[#{direccion}]]
+                    </p>
+                    <h2>[[#{contacto.telefono}]]</h2>  
+                    <p>
+                        Tel: 2225-0060    
+                    </p>
+                    <h2>[[#{contacto.correo}]]</h2>  
+                    <p>
+                        contacto@verduleriahenry.cr
+                    </p>
+                    <h2>[[#{contacto.horario}]]</h2> 
+                    <p>
+                        [[#{horario.LaS}]]
+                    </p>
+                    <p>
+                        [[#{horario.Domingos}]]
+                    </p>
+                </div>          
+            </section>
         <footer th:replace="~{layout/plantilla :: footer}"/>
     </body>
 </html>

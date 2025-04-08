@@ -19,13 +19,12 @@ public interface ProductoService {
     public void delete(Producto producto);
 
 
-    /*Practica #4 Debe agregar al proyecto tienda una versión de una consulta ampliada de su libre escogencia, 
-    puede ser de tabla producto, categoria o venta.*/
+    //Lista de productos utilizando consultas Ampliadas
     List<Producto> findByDescripcionContainingIgnoreCaseOrderByPrecioAsc(String descripcion);
 
-    //Ejemplo 2: Lista de productos utilizando consultas con JPQL    
+    //Lista de productos utilizando consultas con JPQL    
     public List<Producto> metodoJPQL(double precioInf, double precioSup);
 
-    //Ejemplo 3: Lista de productos utilizando consultas con SQL Nativo
+    //Lista de productos utilizando consultas con SQL Nativo
     public List<Producto> metodoNativo(String descripcionCategoria);
 }

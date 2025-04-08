@@ -3,6 +3,11 @@
       xmlns:th="http://www.thymeleaf.org">
     <head th:replace="~{layout/plantilla :: head}">
         <title>TechShop</title>
+        <style>
+            .nav-link {
+                color: green !important;
+            }
+        </style>
     </head>
     <body>
         <!-- 1 Sección principal para mostrar la informaccion de las categorias -->
@@ -10,15 +15,14 @@
             <div class="row py-4">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link" 
-                           aria-current="page" 
-                           href="/pruebas/listado"
-                           >[[#{pruebas.todas}]]</a>
+                        <a class="nav-link"
+                           style="color: green !important;"
+                           href="/pruebas/listado">[[#{pruebas.todas}]]</a>
                     </li>
                     <li th:each="categoria : ${categorias}" class="nav-item">
-                        <a class="nav-link" 
-                           th:href="@{/pruebas/listado/}+${categoria.idCategoria}"
-                           >[[${categoria.descripcion}]]</a>
+                        <a class="nav-link"
+                           style="color: green !important;"
+                           th:href="@{/pruebas/listado/}+${categoria.idCategoria}">[[${categoria.descripcion}]]</a>
                     </li>                    
                 </ul>
             </div>
@@ -141,9 +145,6 @@
 
             </div>
         </section> 
-
-
-
 
     </body>
 </html>
