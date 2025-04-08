@@ -1,14 +1,41 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout/plantilla :: head}">
+    <title>Verdureria Henry</title>
+</head>
+<body>
+    <header th:replace="~{layout/plantilla :: header}"/>
+    <section th:replace="~{carrito/fragmentos :: listadoProductos}"/>
 
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
-    <head th:replace="~{layout/plantilla :: head}">
-        <title>Verdureria Henry</title>
-    </head>
-    <body>
-        <header th:replace="~{layout/plantilla :: header}"/>
+    <section class="imagenes-hover">
+            <style>
+        section.imagenes-hover {
+            display: flex;
+            width: 3000px;
+            height: 430px;
+        }
+        section.imagenes-hover img {
+            width: 0px;
+            flex-grow: 1;
+            object-fit: cover;
+            opacity: .8;
+            transition: .5s ease;
+        }
+        section.imagenes-hover img:hover {
+            cursor: crosshair;
+            width: 300px;
+            opacity: 1;
+            filter: contrast(120%);
+        }
+    </style>
+        <img src="https://pngimg.com/d/banana_PNG824.png"/>
+        <img src="https://proximercado.com/wp-content/uploads/2020/06/25-400x400.jpg"/>
+        <img src="https://www.pomonayfrutartean.com/wp-content/uploads/2019/03/pina-extra-costa-rica.jpg"/>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK9rRb6XTwxMs5aEQFeMnqeJNNFj0FnAwe2A&s"/>
+        <img src="https://www.vegaverde.es/wp-content/uploads/2021/05/img-naranja-home.png"/>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwnI8Mqq2s5ZFuIoH1btrvzZ3SeHTcKiFiQQ&s"/>
+    </section>
 
-
-        <footer th:replace="~{layout/plantilla :: footer}"/>
-    </body>
+    <footer th:replace="~{layout/plantilla :: footer}"/>
+</body>
 </html>
