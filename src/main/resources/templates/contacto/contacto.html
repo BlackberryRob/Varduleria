@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Verdureria Henry</title>
+    </head>
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+        <section class="container my-5">
+                <div class="col-md-6 mx-auto">
+                    <h1>
+                        <i class="fas fa-seedling"></i> <!-- Icono -->
+                        [[#{contacto.contacto}]] 
+                    </h1>
+                    <h2>[[#{contacto.direccion}]]</h2>  
+                    <p>
+                        [[#{direccion}]]
+                    </p>
+                    <h2>[[#{contacto.telefono}]]</h2>  
+                    <p>
+                        Tel: 2225-0060    
+                    </p>
+                    <h2>[[#{contacto.correo}]]</h2>  
+                    <p>
+                        contacto@verduleriahenry.cr
+                    </p>
+                    <h2>[[#{contacto.horario}]]</h2> 
+                    <p>
+                        [[#{horario.LaS}]]
+                    </p>
+                    <p>
+                        [[#{horario.Domingos}]]
+                    </p>
+                </div>          
+            </section>
+        <footer th:replace="~{layout/plantilla :: footer}"/>
+    </body>
+</html>
+

@@ -41,4 +41,22 @@ public class ProductoServiceImpl implements ProductoService {
     public void delete(Producto producto) {
         productoDao.delete(producto);
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto> findByDescripcionContainingIgnoreCaseOrderByPrecioAsc(String descripcion) {
+        return productoDao.findByDescripcionContainingIgnoreCaseOrderByPrecioAsc(descripcion);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto> metodoJPQL(double precioInf, double precioSup) {
+        return productoDao.metodoJPQL(precioInf, precioSup);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto> metodoNativo(String descripcionCategoria) {
+        return productoDao.metodoNativo(descripcionCategoria);
+    }
 }

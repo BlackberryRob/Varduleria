@@ -7,7 +7,13 @@
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"/>
-        <section th:replace="~{carrito/fragmentos :: listadoProductos}"/>
+        
+        <h2>Listado de categorias</h2>
+        
+        <section th:replace="~{categoria/fragmentos :: botonesAgregar}"/> 
+        <section th:replace="~{categoria/fragmentos :: agregarCategoria}"/> 
+        <section th:replace="~{categoria/fragmentos :: listadoCategorias}"/> 
+        
         <footer th:replace="~{layout/plantilla :: footer}"/>
     </body>
 </html>

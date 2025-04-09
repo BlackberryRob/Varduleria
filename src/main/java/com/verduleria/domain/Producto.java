@@ -3,7 +3,6 @@ package com.verduleria.domain;
 import lombok.Data;
 import java.io.Serializable;
 import jakarta.persistence.*;
-import java.util.List;
 
 @Data
 @Entity

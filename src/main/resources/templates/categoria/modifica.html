@@ -6,8 +6,10 @@
         <title>Verdureria Henry</title>
     </head>
     <body>
-        <header th:replace="~{layout/plantilla :: header}"/>
-        <section th:replace="~{carrito/fragmentos :: listadoProductos}"/>
+        <header th:replace="~{layout/plantilla :: header}"/>       
+        
+        <section th:replace="~{categoria/fragmentos :: editarCategoria}"/> 
+        
         <footer th:replace="~{layout/plantilla :: footer}"/>
     </body>
 </html>
